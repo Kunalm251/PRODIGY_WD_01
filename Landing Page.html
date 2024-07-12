@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page with Interactive Navigation Menu</title>
+    
+</head>
+<style>
+    
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000; 
+}
+
+#navbar {
+    display: flex;
+    justify-content: center;
+}
+
+#navbar ul {
+    display: flex;
+    list-style-type: none;
+}
+
+#navbar ul li {
+    margin: 0 15px;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+#navbar ul li a:hover {
+    color: #ffd700; 
+}
+
+.nav-scrolled {
+    background-color: #555;
+    transition: background-color 0.3s ease;
+}
+
+.section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.section:nth-child(even) {
+    background-color: #f7f7f7;
+}
+
+#home{
+    background-image: url(1st.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 350px;
+}
+
+h1{
+    color: #000;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 1px 1px 3px #000000;
+    margin-top: 230px;
+
+}
+
+#about p{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 20px;
+}
+#services{
+    background-color: rgb(122, 127, 131);
+}
+.contain{
+    display: grid;
+    grid-template-columns: 1fr 1fr  1fr;
+    grid-gap: 20px;
+    
+}
+.service{
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    
+}
+
+.cont {
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    margin-left: 380px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    float: right;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+</style>
+<body>
+    <header>
+        <nav id="navbar">
+            <div class="container">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="section">
+            <h1>Welcome to PexiCart</h1>
+            <p>We are the owner of fashion brands.</p>
+        </section>
+
+        <section id="about" class="section">
+            <h2>About Us</h2>
+            <p>Welcome to PexiCart, where fashion meets innovation and quality craftsmanship. As a leading clothing brand owning company, we pride ourselves on curating and nurturing some of the most beloved fashion labels in the industry. Our journey began with a vision to not just create garments, but to define lifestyles and inspire trends.
+
+                At PexiCart, we believe that each brand under our umbrella tells a unique story. From timeless classics to cutting-edge designs, our portfolio spans a diverse range of styles to cater to every fashion aficionado. Through meticulous curation and strategic partnerships, we ensure that each brand maintains its distinct identity while benefiting from our expertise in production, distribution, and marketing.
+                
+                Driven by a passion for excellence and a commitment to sustainability, we strive to make a positive impact on the fashion industry. Our brands are not just about what you wear; they embody a commitment to quality, creativity, and responsible practices. Whether it's a casual outfit for everyday wear or a statement piece for a special occasion, our collections are crafted with care and designed to resonate with fashion-forward individuals across the globe.
+                
+                Join us on our journey as we continue to redefine fashion and empower individuals to express themselves through style. Discover the artistry behind each stitch and the passion that goes into every collection. At PexiCart, fashion is more than just clothing—it's a lifestyle.</p>
+        </section>
+
+        <section id="services" class="section">
+            <h2>Our Services</h2>
+             <div class="contain">
+                <div class="service"> 
+                    <h4>Clothing</h4>
+                    <img src="cl.jpeg" style="padding: 7px";>
+                    <p>Our clothing brands are known for their high-quality materials, innovative designs, and timeless</p>
+                </div>
+                <div class="service">
+                    <h4>Footwear</h4>
+                    <img src="ft.jpeg" style="padding: 7px";>
+                    <p>Our footwear brands offer a wide range of styles, from classic sneakers to trendy boots</p>
+                </div>
+                <div class="service">
+                    <h4>Accessory</h4>
+                    <img src="ass.jpeg" style="padding: 7px";>
+                    <p>Our accessory brands feature a variety of stylish and functional items, from bags to jewelry</p>
+                </div>
+             </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact Us</h2>
+            <p>Get in touch with us.</p>
+            <div class="cont">
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        
+const navbar = document.getElementById('navbar');
+
+
+const navbarOffset = navbar.offsetTop;
+
+function navbarScroll() {
+    if (window.scrollY >= navbarOffset) {
+        navbar.classList.add('nav-scrolled');
+    } else {
+        navbar.classList.remove('nav-scrolled');
+    }
+}
+
+window.addEventListener('scroll', navbarScroll);
+
+    </script>
+</body>
+</html>
